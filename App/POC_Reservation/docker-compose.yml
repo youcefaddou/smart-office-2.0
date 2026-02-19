@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: smartoffice_web
+    ports:
+      - "8080:80"
+    networks:
+      - poc_network
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: postgres:15-alpine
+    container_name: smartoffice_db
+    environment:
+      POSTGRES_USER: admin_so
+      POSTGRES_PASSWORD: SuperPassword123!
+      POSTGRES_DB: smartoffice_reservation
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      # Ligne à décommenter plus tard pour injecter automatiquement tes 3 tables (Salles, Utilisateurs, Reservations)
+      # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - poc_network
+    restart: unless-stopped
+
+networks:
+  poc_network:
+    driver: bridge
+
+volumes:
+  db_data:
+  
