@@ -162,44 +162,76 @@ Règles de collaboration :
 
 
 
-4\. Planning, jalons et sprints (exemple sur 10 semaines)
+Voici la section 4 de ton cahier des charges entièrement retravaillée et réalignée sur notre nouveau découpage en 6 sprints, pour refléter la réalité de ton avancement et le temps qu'il te reste (tes 4 dernières séances).
 
-Sprint 0 (Semaine 0) — Préparation
+Tu peux remplacer l'ancienne section de ton document par celle-ci :
 
-\- Mise en place repo Git, board Trello/Jira, environnement EVE‑NG, charte projet.
+4. Planning, jalons et sprints (Ajusté sur 6 sprints)
+Sprint 1 (S1) — Préparation, Cadrage & Topologie 
 
-Sprint 1 (S1) — Cadrage \& DAT initial
+Mise en place du repository Git et du board Jira.
 
-\- Schémas initiaux, plan d’adressage, backlog détaillé.
+Préparation de l'environnement de maquettage (EVE-NG/GNS3).
 
-Sprint 2 (S2) — Maquette réseau
+Définition du plan d'adressage IP détaillé et des VLANs.
 
-\- Implémentation EVE‑NG : VLANs, routage, ACLs.
+Création des schémas d'architecture (LAN/WAN/DMZ) et initialisation du squelette du DAT.
 
-Sprint 3 (S3) — Sécurité \& monitoring
+Sprint 2 (S2) — Infra de base, Sécurité Périmétrique & Choix Cloud 
 
-\- Déploiement SIEM/ELK, règles pare‑feu, tests d’alerting.
+Définition de la stratégie Cloud, modèle hybride et calcul du TCO.
 
-Sprint 4 (S4) — Cloud POC
+Élaboration de la politique de pare-feu et des ACLs (brouillon).
 
-\- Containerisation de l’app, déploiement IaaS/PaaS, pipeline CI/CD.
+Installation et configuration de l'AD, DNS et DHCP.
 
-Sprint 5 (S5) — Stockage \& DB
+Conception de la stratégie de stockage (SAN/NAS) et sécurité associée.
 
-\- Choix stockage, déploiement DB, sauvegardes.
+Préparation de l'environnement Docker en local.
 
-Sprint 6 (S6) — PCA/PRA \& tests
+Livrables documentaires : Rédaction des sections 4.1 et 5.1 du DAT.
 
-\- BIA, RTO/RPO, tests de restauration, simulations d’incidents.
+Sprint 3 (S3) — Accès distants, DevOps & POC Cloud
 
-Sprint 7 (S7) — Finalisation DAT \& documentation
+Conception de l'architecture d'accès distant (VPN/MFA) et approche Zero Trust.
 
-\- Rédaction DAT final, politiques sécurité, runbooks.
+Design de la stack SIEM pour la gestion des logs.
 
-Sprint 8 (S8) — Préparation oraux
+Déploiement du POC applicatif dans le Cloud (PaaS) avec pipeline CI/CD.
 
-\- Préparation démo 10 min (oral intermédiaire), slides, répétitions.
+Livrables documentaires : Rédaction des sections 4.2, 4.3, 5.2, 5.3 et 7 du DAT.
 
+Sprint 4 (S4) — Bases de données, Résilience & PCA/PRA
+
+Modélisation des bases de données (SQL/NoSQL) et tests de sauvegarde/restauration.
+
+Réalisation du BIA (Bilan d'Impact sur l'Activité) et définition des RTO/RPO chiffrés.
+
+Élaboration des procédures du PCA/PRA et des runbooks d'incidents.
+
+Exécution des tests de sécurité sur la maquette.
+
+Livrables documentaires : Rédaction des sections 6 et 9 du DAT.
+
+Sprint 5 (S5) — Supervision, Détection & Budget
+
+Configuration des tableaux de bord de supervision (Grafana/Kibana) et des alertes.
+
+Simulation technique d'une anomalie réseau/sécurité sur le POC et capture des logs.
+
+Consolidation du budget final du projet.
+
+Livrables documentaires : Rédaction des sections 4.4, 8 et 11 du DAT.
+
+Sprint 6 (S6) — Finalisation documentaire & Préparation Soutenance finale
+
+Vérification finale des dépôts GitHub (Fusion des Pull Requests, README final).
+
+Relecture croisée, finalisation de la traçabilité de gestion de projet et export PDF du DAT.
+
+Préparation des slides de présentation pour l'oral final et répétition (25 min de présentation, 5 min de Q/R).
+
+Livrables documentaires : Rédaction des sections 10 et 12 (Annexes) du DAT.
 Jalons clés :
 
 \- Oral intermédiaire (10 min) : démonstration compétences transverses (Git, gestion projet, présentation).
@@ -209,8 +241,6 @@ Jalons clés :
 \- POC service cloud : S4.
 
 \- Livrables finaux remis : fin S8/S9.
-
-
 
 5\. Critères d’acceptation et évaluation
 
